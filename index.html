@@ -1,23 +1,47 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Avalon Script</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-    <label for="Oberon">Oberon</label> <input type="checkbox" id="Oberon">
-    <label for="Mordred">Mordred</label> <input type="checkbox" id="Mordred">
-    <label for="Percival">Percival</label> <input type="checkbox" id="Percival">
-    <label for="Morgana">Morgana</label> <input type="checkbox" id="Morgana">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
 
-    <button id="playButton">Play</button>
-    <button id="stopButton">Stop</button>
+      label {
+        margin: 10px;
+      }
+
+      button {
+          margin: 10px;
+          padding: 10px 30px;
+          color: white;
+      }
+
+      #playButton {
+          background-color: green;
+      }
+
+      #stopButton {
+          background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <label for="Oberon">Oberon <input type="checkbox" id="Oberon"/></label>
+    <label for="Mordred">Mordred <input type="checkbox" id="Mordred"/></label>
+    <label for="Percival">Percival <input type="checkbox" id="Percival"/></label>
+    <label for="Morgana">Morgana <input type="checkbox" id="Morgana"/></label>
+
+    <button id="playButton">Play</button> <button id="stopButton">Stop</button>
 
     <div id="result"></div>
 
-    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
     <script src="Avalon.js"></script>
-</body>
+  </body>
 </html>

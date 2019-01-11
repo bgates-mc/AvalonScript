@@ -19,6 +19,7 @@ document.getElementById("playButton").addEventListener("click", event => {
     { text: "Not Mordred himself", condition: Mordred },
     { text: "extend your thumb so that Merlin will know of you", condition: true },
     { text: "", condition: true },
+    { text: "Merlin", condition: true },
     { text: "Merlin, Open your eyes and see the agents of Evil", condition: true },
     { text: "", condition: true },
     { text: "Minions of Mordred", condition: true },
@@ -31,7 +32,7 @@ document.getElementById("playButton").addEventListener("click", event => {
     { text: "Merlin", condition: Percival },
     { text: "and Morgana", condition: Percival && Morgana },
     { text: "extend your thumb so that Percival may know of you", condition: Percival },
-    { text: "", condition: true },
+    { text: "", condition: Percival },
     { text: "Percival, open your eyes so you may know Merlin", condition: Percival },
     { text: "and Morgana", condition: Percival && Morgana },
     { text: "", condition: Percival },
@@ -40,7 +41,7 @@ document.getElementById("playButton").addEventListener("click", event => {
     { text: "Put your thumb down and re-form your hand into a fist", condition: Percival },
     { text: "Percival", condition: Percival },
     { text: "Close your eyes", condition: Percival },
-    { text: "", condition: true },
+    { text: "", condition: Percival },
     { text: "All players should have their eyes closed and in a fist in front of them", condition: Percival },
     { text: "Everyone open your eyes", condition: true }
   ];
