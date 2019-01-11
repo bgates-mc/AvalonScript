@@ -20,7 +20,7 @@ document.getElementById("playButton").addEventListener("click", event => {
     { text: "extend your thumb so that Merlin will know of you", condition: true },
     { text: "", condition: true },
     { text: "Merlin", condition: true },
-    { text: "Merlin, Open your eyes and see the agents of Evil", condition: true },
+    { text: "Open your eyes and see the agents of Evil", condition: true },
     { text: "", condition: true },
     { text: "Minions of Mordred", condition: true },
     { text: "put your thumb down and re-form your hand into a fist", condition: true },
