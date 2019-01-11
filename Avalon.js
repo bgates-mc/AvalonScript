@@ -38,6 +38,9 @@ document.getElementById("playButton").addEventListener('click', (event) => {
         { text: "Everyone open your eyes", condition: true }
     ];
 
+    var msg = new SpeechSynthesisUtterance(lines[0].text);
+    window.speechSynthesis.speak(msg);
+
     lines.forEach((line) => {
         if (line.condition) {
             console.log(line.text);
