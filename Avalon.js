@@ -35,23 +35,33 @@ document.getElementById("playButton").addEventListener("click", event => {
     { text: "Percival", condition: Percival },
     { text: "Close your eyes", condition: Percival },
     { text: "All players should have their eyes closed and in a fist in front of them", condition: Percival },
+    { text: "", condition: true },
     { text: "Everyone open your eyes", condition: true }
   ];
 
-  lines.forEach(line => {
+  function readLine() {
+    if (!lines.length) {
+      return;
+    }
+      
+    let line = lines.shift();
     if (line.condition) {
       if (line.text) {
-        responsiveVoice.speak(line.text, "US English Female");
+        responsiveVoice.speak(line.text, "US English Female", { onend: readLine });
       } else {
-          responsiveVoice.speak("This is a pause right now", "US English Female", { volume: 0, rate: 0.1 });
+        responsiveVoice.speak("This is a pause now", "US English Female", { volume: 0, rate: 0.1, onend: readLine });
       }
+    } else {
+      readLine();
     }
-  });
+  }
 
   document.getElementById("result").innerText = lines
     .filter(line => line.condition)
     .map(line => line.text)
     .join("\n");
+
+  readLine();
 });
 
 document.getElementById("stopButton").addEventListener("click", event => {
